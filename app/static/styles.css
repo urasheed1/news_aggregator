@@ -1,26 +1,41 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-}
-
-h1 {
+    background-color: #f9f9f9;
     color: #333;
 }
 
-ul {
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.news-category {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.news-category li {
     margin: 10px 0;
 }
 
-a {
+.news-category a {
     text-decoration: none;
-    color: #007BFF;
+    color: #2980b9;
+    font-weight: bold;
 }
 
-a:hover {
+.news-category a:hover {
     text-decoration: underline;
+}
+
+.news-category a:visited {
+    color: #8e44ad;
 }
