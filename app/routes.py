@@ -2,6 +2,15 @@ from flask import Blueprint, render_template, jsonify
 import requests
 from transformers import pipeline
 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the API key
+api_key = os.getenv("NEWS_API_KEY")
+
 main = Blueprint('main', __name__)
 
 # Initialize Hugging Face pipelines
@@ -30,7 +39,7 @@ def get_news_by_category(category):
     params = {
         'country': 'us',
         'category': category,
-        'apiKey': 'f2e85a990df44c5fa9cb0110bdd6e807'  
+        'apiKey': api_key  
     }
     response = requests.get(url, params=params)
     if response.status_code == 200:

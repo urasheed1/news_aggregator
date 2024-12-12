@@ -1,7 +1,7 @@
 # News Aggregator
 
 ## Overview
-This **News Aggregator** is a web application that collects, categorizes, and analyzes news articles from multiple sources using Natural Language Processing (NLP). It provides a categorized and sentiment-analyzed view of the latest news to help users easily digest information.
+The **News Aggregator** is a web application that collects, categorizes, and analyzes news articles from multiple sources using Natural Language Processing (NLP). It provides a categorized and sentiment-analyzed view of the latest news to help users easily digest information.
 
 ## Features
 - **News Categorization**: Automatically groups news articles into categories such as Sports, Business, Technology, Entertainment, Health, Politics, and Science.
@@ -20,7 +20,7 @@ This **News Aggregator** is a web application that collects, categorizes, and an
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/urasheed1/news-aggregator.git
+   git clone https://github.com/yourusername/news-aggregator.git
    cd news-aggregator
    ```
 2. Create a virtual environment:
@@ -33,8 +33,22 @@ This **News Aggregator** is a web application that collects, categorizes, and an
    pip install -r requirements.txt
    ```
 4. Set up your API key:
-   - Obtain an API key from [News API](https://newsapi.org/).
-   - Replace the placeholder API key (`f2e85a990df44c5fa9cb0110bdd6e807`) in the `get_news_by_category` function in `routes.py`.
+   - Create a `.env` file in the root directory:
+     ```bash
+     touch .env
+     ```
+   - Add your API key to the `.env` file:
+     ```bash
+     echo "NEWS_API_KEY=your_api_key_here" >> .env
+     ```
+   - Replace the hardcoded API key in `routes.py` with:
+     ```python
+     import os
+     from dotenv import load_dotenv
+     load_dotenv()
+
+     api_key = os.getenv("NEWS_API_KEY")
+     ```
 
 ## Usage
 1. Run the application:
@@ -71,6 +85,7 @@ news_aggregator/
 │       └── styles.css
 ├── run.py
 ├── requirements.txt
+├── .env
 ├── README.md
 ```
 
@@ -87,4 +102,3 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
