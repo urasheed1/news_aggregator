@@ -1,7 +1,7 @@
 # News Aggregator
 
 ## Overview
-The **News Aggregator** is a web application that collects, categorizes, and analyzes news articles from multiple sources using Natural Language Processing (NLP). It provides a categorized and sentiment-analyzed view of the latest news to help users easily digest information.
+This **News Aggregator** is a web application that collects, categorizes, and analyzes news articles from multiple sources using Natural Language Processing (NLP). It provides a categorized and sentiment-analyzed view of the latest news to help users easily digest information.
 
 ## Features
 - **News Categorization**: Automatically groups news articles into categories such as Sports, Business, Technology, Entertainment, Health, Politics, and Science.
