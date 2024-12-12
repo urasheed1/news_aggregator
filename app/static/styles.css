@@ -24,6 +24,9 @@ h2 {
 
 .news-category li {
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .news-category a {
@@ -38,4 +41,23 @@ h2 {
 
 .news-category a:visited {
     color: #8e44ad;
+}
+
+.sentiment {
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.sentiment.positive {
+    background-color: #27ae60;
+}
+
+.sentiment.neutral {
+    background-color: #95a5a6;
+}
+
+.sentiment.negative {
+    background-color: #e74c3c;
 }
